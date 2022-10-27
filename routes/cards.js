@@ -3,9 +3,6 @@ const fsPromises = require('fs').promises;
 const path = require('path');
 
 const cardsPath = path.join(__dirname, '../data/cards.json');
-cardsRouter.get('/', (req, res) => {
-  res.status(404).send({ message: 'A solicitação não foi encontrada' });
-});
 
 cardsRouter.get('/cards', (req, res) => {
   fsPromises
