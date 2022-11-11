@@ -85,7 +85,7 @@ module.exports.updateUserAvatar = (req, res) => {
       }
       if (err.name === 'ValidationError') {
         const ERROR_CODE = 400;
-        res.status(ERROR_CODE).send({ message: err.errors.avatar.message });
+        res.status(ERROR_CODE).json({ message: err.errors.avatar.message });
       } else {
         const ERROR_CODE = 500;
         res.status(ERROR_CODE).send({ message: 'Um erro ocorreu no servidor' });
